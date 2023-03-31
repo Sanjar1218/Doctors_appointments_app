@@ -22,21 +22,30 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Welcome, Toluwani'),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.calendar_month),
-            color: Colors.black,
-            onPressed: () {},
-          ),
-          IconButton(
-            icon: const Icon(Icons.more_vert),
-            color: Colors.black,
-            onPressed: () {},
-          ),
-        ],
-      ),
-    );
+        appBar: AppBar(
+          title: const Text('Welcome, Toluwani'),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.event_note_outlined),
+              color: Colors.black,
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: const Icon(Icons.more_vert),
+              color: Colors.black,
+              onPressed: () {},
+            ),
+          ],
+        ),
+        body: Column(
+          children: [
+            Container(
+              color: Theme.of(context).primaryColor,
+              child: Column(children: const [
+                Text('Covid-19\nHealthcare'),
+              ]),
+            )
+          ],
+        ));
   }
 }

@@ -17,4 +17,5 @@ ThemeData theme = ThemeData(
     titleMedium: TextStyle(color: Colors.black),
     titleSmall: TextStyle(color: Colors.black),
   ),
+  primaryColor: Colors.blue,
 );
