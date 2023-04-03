@@ -51,7 +51,7 @@ class _MainPageState extends State<MainPage> {
                 color: Theme.of(context).primaryColor,
               ),
               width: double.infinity,
-              height: MediaQuery.of(context).size.height * 0.6,
+              height: MediaQuery.of(context).size.height * 0.55,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -101,7 +101,8 @@ class _MainPageState extends State<MainPage> {
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(40, 60),
+                      elevation: 0.5,
+                      minimumSize: const Size(40, 50),
                       backgroundColor: Theme.of(context).secondaryHeaderColor,
                       shape: RoundedRectangleBorder(
                         borderRadius:
@@ -109,11 +110,41 @@ class _MainPageState extends State<MainPage> {
                       ),
                     ),
                     child: Icon(Icons.arrow_forward,
+                        size: 16.5,
                         color: Theme.of(context).colorScheme.inversePrimary),
                   ),
                 ],
               ),
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.all(kSmallMargin),
+              child: Row(
+                children: [
+                  Text(
+                    kFooterTitle,
+                    style: Theme.of(context).textTheme.titleMedium,
+                  ),
+                ],
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                shrinkWrap: true,
+                itemCount: 4,
+                itemBuilder: (context, index) {
+                  return Container(
+                    width: 80.0,
+                    height: 50.0,
+                    margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ),
