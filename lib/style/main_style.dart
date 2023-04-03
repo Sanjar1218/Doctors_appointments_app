@@ -28,6 +28,11 @@ ThemeData theme = ThemeData(
       fontSize: 18.0,
       fontWeight: FontWeight.w500,
     ),
+    bodyLarge: TextStyle(
+      color: Colors.black,
+      fontSize: 20.0,
+      fontWeight: FontWeight.w500,
+    ),
     bodyMedium: TextStyle(
       color: Colors.grey,
       fontWeight: FontWeight.w200,
